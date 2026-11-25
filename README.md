@@ -31,6 +31,7 @@ Collection de skills réutilisables pour les agents de développement. Chaque sk
 | [mobile-native](skills/mobile-native/SKILL.md) | Adapter une application web aux usages et aux interactions mobiles. |
 | [pick-ui-library](skills/pick-ui-library/SKILL.md) | Choisir une bibliothèque frontend adaptée à un besoin ; invocation explicite. |
 | [prototype](skills/prototype/SKILL.md) | Créer et comparer plusieurs variantes d'une interface ; invocation explicite. |
+| [unslop](skills/unslop/SKILL.md) | Revoir et améliorer une interface pour lui donner une identité visuelle propre. |
 
 ### Développement et méthodes
 
@@ -45,3 +46,5 @@ Collection de skills réutilisables pour les agents de développement. Chaque sk
 Consultez le `SKILL.md` du skill adapté à votre tâche et ses éventuels fichiers complémentaires. Selon l'agent utilisé, vous pouvez aussi invoquer un skill disponible par son nom, par exemple `$animate`. Les skills marqués « invocation explicite » doivent être demandés directement.
 
 Cette collection exclut les skills métier ainsi que les skills intégrés à Codex/OpenAI (`openai-docs`, `skill-creator` et `skill-installer`). Les conditions de licence propres à chaque skill restent applicables ; voir notamment les licences de [designing-data-visualizations](skills/designing-data-visualizations/README.md).
+
+Le skill [unslop](skills/unslop/SKILL.md) est créé par [Damir Sokolovsky](https://github.com/heydamir) et provient de [heydamir/unslop](https://github.com/heydamir/unslop), sous licence [CC BY 4.0](skills/unslop/LICENSE).
