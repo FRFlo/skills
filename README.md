@@ -41,10 +41,30 @@ Collection de skills réutilisables pour les agents de développement. Chaque sk
 | [self-learning](skills/self-learning/SKILL.md) | Transformer une méthode ou une découverte issue d'une session en skill réutilisable. |
 | [write-swift](skills/write-swift/SKILL.md) | Écrire, relire ou moderniser du Swift, notamment sa concurrence. |
 
+## Installation avec Skills CLI
+
+Depuis un projet, listez les skills disponibles puis choisissez ceux à installer :
+
+```bash
+npx skills add FRFlo/skills --list
+npx skills add FRFlo/skills --skill animate
+```
+
+Pour choisir parmi tous les skills, lancez `npx skills add FRFlo/skills`. Ajoutez `-g` pour une installation globale. Le CLI installe les copies présentes dans ce dépôt ; leurs mises à jour ne suivent pas automatiquement les dépôts d'origine.
+
+## Sources
+
+- [emilkowalski/skills](https://github.com/emilkowalski/skills) : animate, animate-expo, animation-performance, animation-vocabulary, apple-design, ask-sonner, break-ui, choreograph, emil-design-eng, find-animation-opportunities, gestures, improve-animations, mobile-native, pick-ui-library, prototype, remove-animations, review-animations et write-swift.
+- [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) : karpathy-guidelines.
+- [kulaxyz/self-learning-skills](https://github.com/kulaxyz/self-learning-skills) : self-learning.
+- [ali-kassir-phd/designing-data-visualizations](https://github.com/ali-kassir-phd/designing-data-visualizations) : designing-data-visualizations.
+- [heydamir/unslop](https://github.com/heydamir/unslop) : unslop, créé par [Damir Sokolovsky](https://github.com/heydamir), sous licence [CC BY 4.0](skills/unslop/LICENSE).
+
+Les fichiers de cette collection peuvent correspondre à des versions antérieures des sources.
+
 ## Utilisation
 
 Consultez le `SKILL.md` du skill adapté à votre tâche et ses éventuels fichiers complémentaires. Selon l'agent utilisé, vous pouvez aussi invoquer un skill disponible par son nom, par exemple `$animate`. Les skills marqués « invocation explicite » doivent être demandés directement.
 
 Cette collection exclut les skills métier ainsi que les skills intégrés à Codex/OpenAI (`openai-docs`, `skill-creator` et `skill-installer`). Les conditions de licence propres à chaque skill restent applicables ; voir notamment les licences de [designing-data-visualizations](skills/designing-data-visualizations/README.md).
 
-Le skill [unslop](skills/unslop/SKILL.md) est créé par [Damir Sokolovsky](https://github.com/heydamir) et provient de [heydamir/unslop](https://github.com/heydamir/unslop), sous licence [CC BY 4.0](skills/unslop/LICENSE).
