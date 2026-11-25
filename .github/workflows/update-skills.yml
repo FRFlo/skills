@@ -1,0 +1,60 @@
+name: Actualiser les skills
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Actualiser depuis les dépôts d'origine
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp=$(mktemp -d)
+          trap 'rm -rf "$tmp"' EXIT
+          mkdir "$tmp/staged"
+          cp skills-sources.lock.json "$tmp/lock.json"
+          while IFS= read -r source; do
+            repo="$tmp/repo"
+            git clone --quiet --depth 1 "$source" "$repo"
+            revision=$(git -C "$repo" rev-parse HEAD)
+            jq --arg source "$source" --arg revision "$revision" \
+              '.[$source].commit = $revision' "$tmp/lock.json" > "$tmp/next.json"
+            mv "$tmp/next.json" "$tmp/lock.json"
+            path=$(jq -r --arg source "$source" '.[$source].path' skills-sources.lock.json)
+            while IFS= read -r skill; do
+              skill_path=${path//\{skill\}/$skill}
+              test -f "$repo/$skill_path/SKILL.md"
+              mkdir "$tmp/staged/$skill"
+              cp -a "$repo/$skill_path/." "$tmp/staged/$skill/"
+              rm -rf "$tmp/staged/$skill/.git"
+              while IFS= read -r license; do
+                cp "$repo/$license" "$tmp/staged/$skill/$license"
+              done < <(jq -r --arg source "$source" '.[$source].licenses[]' skills-sources.lock.json)
+            done < <(jq -r --arg source "$source" '.[$source].skills[]' skills-sources.lock.json)
+            rm -rf "$repo"
+          done < <(jq -r 'keys[]' skills-sources.lock.json)
+          for skill in "$tmp/staged"/*; do
+            name=${skill##*/}
+            rm -rf "skills/$name"
+            cp -a "$skill" "skills/$name"
+          done
+          cp "$tmp/lock.json" skills-sources.lock.json
+      - name: Proposer les mises à jour
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/update-skills
+          delete-branch: true
+          commit-message: 'chore: actualiser les skills depuis leurs sources'
+          title: 'chore: actualiser les skills depuis leurs sources'
+          body: 'Actualisation hebdomadaire des skills et de leurs révisions sources.'

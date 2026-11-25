@@ -50,7 +50,7 @@ npx skills add FRFlo/skills --list
 npx skills add FRFlo/skills --skill animate
 ```
 
-Pour choisir parmi tous les skills, lancez `npx skills add FRFlo/skills`. Ajoutez `-g` pour une installation globale. Le CLI installe les copies présentes dans ce dépôt ; leurs mises à jour ne suivent pas automatiquement les dépôts d'origine.
+Pour choisir parmi tous les skills, lancez `npx skills add FRFlo/skills`. Ajoutez `-g` pour une installation globale. Le CLI installe les copies présentes dans ce dépôt. Pour actualiser une installation existante, relancez la commande d’installation.
 
 ## Sources
 
@@ -60,7 +60,9 @@ Pour choisir parmi tous les skills, lancez `npx skills add FRFlo/skills`. Ajoute
 - [ali-kassir-phd/designing-data-visualizations](https://github.com/ali-kassir-phd/designing-data-visualizations) : designing-data-visualizations.
 - [heydamir/unslop](https://github.com/heydamir/unslop) : unslop, créé par [Damir Sokolovsky](https://github.com/heydamir), sous licence [CC BY 4.0](skills/unslop/LICENSE).
 
-Les fichiers de cette collection peuvent correspondre à des versions antérieures des sources.
+Les révisions importées sont consignées dans [skills-sources.lock.json](skills-sources.lock.json). Le workflow [Actualiser les skills](.github/workflows/update-skills.yml) vérifie les sources chaque lundi à 6 h UTC et ouvre ou actualise une pull request si nécessaire. Il peut aussi être lancé manuellement depuis GitHub Actions. L’ouverture de pull requests par GitHub Actions doit être autorisée dans les paramètres du dépôt. Les chemins des skills et les licences à copier sont définis dans ce fichier JSON.
+
+La synchronisation remplace entièrement les dossiers des skills suivis par leur contenu amont ; les modifications locales dans ces dossiers doivent donc être proposées aux dépôts d'origine.
 
 ## Utilisation
 
