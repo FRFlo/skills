@@ -19,7 +19,8 @@
       "prototype",
       "remove-animations",
       "review-animations",
-      "write-swift"
+      "write-swift",
+      "learn-taste"
     ],
     "path": "skills/{skill}",
     "licenses": [
@@ -68,7 +69,8 @@
       "babysit-pr",
       "modernize",
       "leaving-pr-comments",
-      "takeover"
+      "takeover",
+      "file-pr"
     ],
     "path": "skills/{skill}",
     "licenses": [
@@ -119,5 +121,48 @@
       "LICENSE"
     ],
     "branch": "next"
+  },
+  "https://github.com/jakubkrehel/skills.git": {
+    "commit": "672ae44ace6aaed65b86cbb1e2fd6fbea0e79578",
+    "skills": [
+      "better-accessibility",
+      "better-layout",
+      "better-typography",
+      "better-writing",
+      "better-colors",
+      "build-design",
+      "interface-review",
+      "state-machine",
+      "explain-interface"
+    ],
+    "path": "skills/{skill}",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  "https://github.com/waffleflopper/ai-tools.git": {
+    "commit": "6f79ab8e7fc662a8a3bcdae2e1badf80165bc6eb",
+    "skills": [
+      "domain-modeling",
+      "codebase-design",
+      "grilling",
+      "prune-tests",
+      "show-me"
+    ],
+    "path": "skills/{skill}",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  "https://github.com/obra/superpowers.git": {
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7",
+    "skills": [
+      "systematic-debugging",
+      "receiving-code-review"
+    ],
+    "path": "skills/{skill}",
+    "licenses": [
+      "LICENSE"
+    ]
   }
 }

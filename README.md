@@ -23,6 +23,16 @@ Collection de skills réutilisables pour les agents de développement. Chaque sk
 
 | Skill | Utilisation |
 | --- | --- |
+| [better-accessibility](skills/better-accessibility/SKILL.md) | Examiner et améliorer l’accessibilité des interfaces. |
+| [better-colors](skills/better-colors/SKILL.md) | Créer des palettes et vérifier leur contraste. |
+| [better-layout](skills/better-layout/SKILL.md) | Structurer les mises en page et leur adaptation aux écrans. |
+| [better-typography](skills/better-typography/SKILL.md) | Améliorer la typographie et le rendu du texte. |
+| [better-writing](skills/better-writing/SKILL.md) | Rédiger et relire les textes d’interface. |
+| [build-design](skills/build-design/SKILL.md) | Construire une interface à partir d’une maquette ou d’une image. |
+| [explain-interface](skills/explain-interface/SKILL.md) | Expliquer la construction d’une interface ou d’un effet visuel. |
+| [interface-review](skills/interface-review/SKILL.md) | Repérer les régressions d’interface dans un changement. |
+| [learn-taste](skills/learn-taste/SKILL.md) | Conserver les corrections et préférences de design d’un projet. |
+| [state-machine](skills/state-machine/SKILL.md) | Afficher et explorer les différents états d’un composant. |
 | [apple-design](skills/apple-design/SKILL.md) | Appliquer au web les principes d'interface et de mouvement inspirés d'Apple. |
 | [ask-sonner](skills/ask-sonner/SKILL.md) | Installer, utiliser et dépanner les notifications Sonner pour React. |
 | [break-ui](skills/break-ui/SKILL.md) | Tester une interface avec des données extrêmes et relever les problèmes. |
@@ -41,6 +51,14 @@ Collection de skills réutilisables pour les agents de développement. Chaque sk
 
 | Skill | Utilisation |
 | --- | --- |
+| [codebase-design](skills/codebase-design/SKILL.md) | Concevoir des interfaces de modules claires. |
+| [domain-modeling](skills/domain-modeling/SKILL.md) | Clarifier les concepts et le vocabulaire métier. |
+| [file-pr](skills/file-pr/SKILL.md) | Préparer une pull request concise. |
+| [grilling](skills/grilling/SKILL.md) | Mettre à l’épreuve un plan ou une décision. |
+| [prune-tests](skills/prune-tests/SKILL.md) | Repérer les tests fragiles ou sans comportement utile. |
+| [receiving-code-review](skills/receiving-code-review/SKILL.md) | Évaluer les retours de revue avant de les appliquer. |
+| [show-me](skills/show-me/SKILL.md) | Expliquer un sujet avec des schémas et représentations visuelles. |
+| [systematic-debugging](skills/systematic-debugging/SKILL.md) | Rechercher méthodiquement la cause d’un problème. |
 | [babysit-pr](skills/babysit-pr/SKILL.md) | Suivre une pull request, ses vérifications et ses revues. |
 | [karpathy-guidelines](skills/karpathy-guidelines/SKILL.md) | Guider l'écriture, la revue et la refactorisation de code avec des changements ciblés et vérifiables. |
 | [leaving-pr-comments](skills/leaving-pr-comments/SKILL.md) | Rédiger des commentaires sur GitHub au nom de l’agent. |
@@ -69,15 +87,18 @@ Pour choisir parmi tous les skills, lancez `npx skills add FRFlo/skills`. Ajoute
 
 ## Sources
 
-- [emilkowalski/skills](https://github.com/emilkowalski/skills) : animate, animate-expo, animation-performance, animation-vocabulary, apple-design, ask-sonner, break-ui, choreograph, emil-design-eng, find-animation-opportunities, gestures, improve-animations, mobile-native, pick-ui-library, prototype, remove-animations, review-animations et write-swift.
+- [emilkowalski/skills](https://github.com/emilkowalski/skills) : animate, animate-expo, animation-performance, animation-vocabulary, apple-design, ask-sonner, break-ui, choreograph, emil-design-eng, find-animation-opportunities, gestures, improve-animations, mobile-native, pick-ui-library, prototype, remove-animations, review-animations, write-swift et learn-taste.
 - [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) : karpathy-guidelines.
 - [kulaxyz/self-learning-skills](https://github.com/kulaxyz/self-learning-skills) : self-learning.
 - [ali-kassir-phd/designing-data-visualizations](https://github.com/ali-kassir-phd/designing-data-visualizations) : designing-data-visualizations.
+- [jakubkrehel/skills](https://github.com/jakubkrehel/skills) : better-accessibility, better-colors, better-layout, better-typography, better-writing, build-design, explain-interface, interface-review et state-machine.
+- [waffleflopper/ai-tools](https://github.com/waffleflopper/ai-tools) : codebase-design, domain-modeling, grilling, prune-tests et show-me.
+- [obra/superpowers](https://github.com/obra/superpowers) : receiving-code-review et systematic-debugging.
 - [index-how/vocabulary](https://github.com/index-how/vocabulary) : vocabulary.
 - [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) : security-audit.
 - [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) : les six skills Ponytail, sans doublons OpenClaw.
 - [Tsuzat/Edra](https://github.com/Tsuzat/Edra/tree/next/.agents/skills) : shadcn-svelte et tailwind-4-docs, branche `next`.
-- [t3dotgg/tstack](https://github.com/t3dotgg/tstack) : babysit-pr, leaving-pr-comments, modernize et takeover.
+- [t3dotgg/tstack](https://github.com/t3dotgg/tstack) : babysit-pr, file-pr, leaving-pr-comments, modernize et takeover.
 - [heydamir/unslop](https://github.com/heydamir/unslop) : unslop, créé par [Damir Sokolovsky](https://github.com/heydamir), sous licence [CC BY 4.0](skills/unslop/LICENSE).
 
 Les révisions importées sont consignées dans [skills-sources.lock.json](skills-sources.lock.json). Le workflow [Actualiser les skills](.github/workflows/update-skills.yml) vérifie les sources chaque lundi à 6 h UTC et ouvre ou actualise une pull request si nécessaire. Il peut aussi être lancé manuellement depuis GitHub Actions. L’ouverture de pull requests par GitHub Actions doit être autorisée dans les paramètres du dépôt. Les chemins des skills et les licences à copier sont définis dans ce fichier JSON.
