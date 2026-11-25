@@ -26,7 +26,10 @@ jobs:
           cp skills-sources.lock.json "$tmp/lock.json"
           while IFS= read -r source; do
             repo="$tmp/repo"
-            git clone --quiet --depth 1 "$source" "$repo"
+            branch=$(jq -r --arg source "$source" '.[$source].branch // empty' skills-sources.lock.json)
+            clone_args=(--quiet --depth 1)
+            if [[ -n "$branch" ]]; then clone_args+=(--branch "$branch"); fi
+            git clone "${clone_args[@]}" "$source" "$repo"
             revision=$(git -C "$repo" rev-parse HEAD)
             jq --arg source "$source" --arg revision "$revision" \
               '.[$source].commit = $revision' "$tmp/lock.json" > "$tmp/next.json"

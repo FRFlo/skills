@@ -61,5 +61,63 @@
     "licenses": [
       "LICENSE"
     ]
+  },
+  "https://github.com/t3dotgg/tstack.git": {
+    "commit": "11e37a74d0a6868c121cd0910ab2b3bd9873b92a",
+    "skills": [
+      "babysit-pr",
+      "modernize",
+      "leaving-pr-comments",
+      "takeover"
+    ],
+    "path": "skills/{skill}",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  "https://github.com/index-how/vocabulary.git": {
+    "commit": "b2d53205a03a6538c394b22f28ea175fdbfb97e3",
+    "skills": [
+      "vocabulary"
+    ],
+    "path": "skills/{skill}",
+    "licenses": []
+  },
+  "https://github.com/cloudflare/security-audit-skill.git": {
+    "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+    "skills": [
+      "security-audit"
+    ],
+    "path": "skills/{skill}",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  "https://github.com/DietrichGebert/ponytail.git": {
+    "commit": "ebd8654c2c627f721eb8f9c0d1bd4090a29f9e10",
+    "skills": [
+      "ponytail",
+      "ponytail-audit",
+      "ponytail-debt",
+      "ponytail-gain",
+      "ponytail-help",
+      "ponytail-review"
+    ],
+    "path": "skills/{skill}",
+    "licenses": [
+      "LICENSE"
+    ]
+  },
+  "https://github.com/Tsuzat/Edra.git": {
+    "commit": "2b9b02599bb8775a3718defc70364101e656105d",
+    "skills": [
+      "shadcn-svelte",
+      "tailwind-4-docs"
+    ],
+    "path": ".agents/skills/{skill}",
+    "licenses": [
+      "LICENSE"
+    ],
+    "branch": "next"
   }
 }

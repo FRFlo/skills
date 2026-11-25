@@ -31,14 +31,29 @@ Collection de skills réutilisables pour les agents de développement. Chaque sk
 | [mobile-native](skills/mobile-native/SKILL.md) | Adapter une application web aux usages et aux interactions mobiles. |
 | [pick-ui-library](skills/pick-ui-library/SKILL.md) | Choisir une bibliothèque frontend adaptée à un besoin ; invocation explicite. |
 | [prototype](skills/prototype/SKILL.md) | Créer et comparer plusieurs variantes d'une interface ; invocation explicite. |
+| [shadcn-svelte](skills/shadcn-svelte/SKILL.md) | Gérer les composants et projets shadcn-svelte. |
+| [tailwind-4-docs](skills/tailwind-4-docs/SKILL.md) | Consulter la documentation et les usages de Tailwind CSS v4. |
 | [unslop](skills/unslop/SKILL.md) | Revoir et améliorer une interface pour lui donner une identité visuelle propre. |
+
+| [vocabulary](skills/vocabulary/SKILL.md) | Trouver le vocabulaire précis du design et des interfaces. |
 
 ### Développement et méthodes
 
 | Skill | Utilisation |
 | --- | --- |
+| [babysit-pr](skills/babysit-pr/SKILL.md) | Suivre une pull request, ses vérifications et ses revues. |
 | [karpathy-guidelines](skills/karpathy-guidelines/SKILL.md) | Guider l'écriture, la revue et la refactorisation de code avec des changements ciblés et vérifiables. |
+| [leaving-pr-comments](skills/leaving-pr-comments/SKILL.md) | Rédiger des commentaires sur GitHub au nom de l’agent. |
+| [modernize](skills/modernize/SKILL.md) | Mettre à jour une pull request ancienne, notamment par rebase. |
+| [ponytail](skills/ponytail/SKILL.md) | Favoriser des solutions de code simples et ciblées. |
+| [ponytail-audit](skills/ponytail-audit/SKILL.md) | Auditer la qualité et les risques d’un dépôt. |
+| [ponytail-debt](skills/ponytail-debt/SKILL.md) | Recenser les raccourcis et la dette technique signalés. |
+| [ponytail-gain](skills/ponytail-gain/SKILL.md) | Présenter les gains mesurés par Ponytail. |
+| [ponytail-help](skills/ponytail-help/SKILL.md) | Consulter les commandes et niveaux de Ponytail. |
+| [ponytail-review](skills/ponytail-review/SKILL.md) | Examiner la qualité et les risques d’un changement. |
+| [security-audit](skills/security-audit/SKILL.md) | Auditer la sécurité du code et analyser les vulnérabilités. |
 | [self-learning](skills/self-learning/SKILL.md) | Transformer une méthode ou une découverte issue d'une session en skill réutilisable. |
+| [takeover](skills/takeover/SKILL.md) | Reprendre et mener à terme une pull request, une branche ou le travail d’un agent. |
 | [write-swift](skills/write-swift/SKILL.md) | Écrire, relire ou moderniser du Swift, notamment sa concurrence. |
 
 ## Installation avec Skills CLI
@@ -58,6 +73,11 @@ Pour choisir parmi tous les skills, lancez `npx skills add FRFlo/skills`. Ajoute
 - [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) : karpathy-guidelines.
 - [kulaxyz/self-learning-skills](https://github.com/kulaxyz/self-learning-skills) : self-learning.
 - [ali-kassir-phd/designing-data-visualizations](https://github.com/ali-kassir-phd/designing-data-visualizations) : designing-data-visualizations.
+- [index-how/vocabulary](https://github.com/index-how/vocabulary) : vocabulary.
+- [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) : security-audit.
+- [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) : les six skills Ponytail, sans doublons OpenClaw.
+- [Tsuzat/Edra](https://github.com/Tsuzat/Edra/tree/next/.agents/skills) : shadcn-svelte et tailwind-4-docs, branche `next`.
+- [t3dotgg/tstack](https://github.com/t3dotgg/tstack) : babysit-pr, leaving-pr-comments, modernize et takeover.
 - [heydamir/unslop](https://github.com/heydamir/unslop) : unslop, créé par [Damir Sokolovsky](https://github.com/heydamir), sous licence [CC BY 4.0](skills/unslop/LICENSE).
 
 Les révisions importées sont consignées dans [skills-sources.lock.json](skills-sources.lock.json). Le workflow [Actualiser les skills](.github/workflows/update-skills.yml) vérifie les sources chaque lundi à 6 h UTC et ouvre ou actualise une pull request si nécessaire. Il peut aussi être lancé manuellement depuis GitHub Actions. L’ouverture de pull requests par GitHub Actions doit être autorisée dans les paramètres du dépôt. Les chemins des skills et les licences à copier sont définis dans ce fichier JSON.
